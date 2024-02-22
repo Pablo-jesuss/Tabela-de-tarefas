@@ -9,14 +9,20 @@
 }
 
 body {
-  background-image: url(/image/photo.avif);
+  background-image: url(/image/image.jpg);
+  background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 button {
   background-color: #fdfdfd;
-  color: blue;
-  border: 2px solid #102f5e;
+  color: #5e2f10;
+  border: 2px solid #5e2f10;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
@@ -24,4 +30,49 @@ button {
   display: flex;
   padding: 0.3rem 0.6rem;
   justify-content: center;
+  transition: 0.4s;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #5e2f10;
+}
+
+button:hover > i {
+  color: #fff;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+input,
+select {
+  padding: 0.25rem 0.5rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* header */
+
+.todo-container {
+  max-width: 550px;
+  width: 100%;
+  background-color: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.todo-container header {
+  text-align: center;
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #ccc;
+  max-width: 400px;
+  margin: 0 auto;
 }
