@@ -173,11 +173,7 @@ select {
   margin-left: 0.4rem;
 }
 
-.done {
-  background-color: #5e2f10;
-}
-
 .done h3 {
-  color: #fff;
+  color: #131212;
   text-decoration: line-through;
 }
