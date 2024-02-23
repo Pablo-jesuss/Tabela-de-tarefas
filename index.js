@@ -6,10 +6,21 @@ const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const cancelBtn = document.querySelector("#cancel-edit-btn");
 // Funções
+const saveTodo = (text) => {
+  const todo = document.createElement("div");
+  todo.classList.add("todo");
 
+  const todoTitle = document.createElement("h3");
+  todoTitle.innerText = text;
+  todo.appendChild(todoTitle);
+};
 // Eventos
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  console.log("Enviou form");
+  const inputValue = todoInput.value;
+
+  if (inputValue) {
+    saveTodo(inputValue);
+  }
 });
