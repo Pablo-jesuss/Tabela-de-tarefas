@@ -126,7 +126,7 @@ select {
   border-right: 1px solid #ddd;
   padding-right: 1rem;
   margin-right: 1rem;
-  width: 65%;
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
