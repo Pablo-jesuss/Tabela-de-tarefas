@@ -163,3 +163,21 @@ select {
   border-bottom: 1px solid #ddd;
   transition: 0.3s;
 }
+
+.todo h3 {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.todo button {
+  margin-left: 0.4rem;
+}
+
+.done {
+  background-color: #5e2f10;
+}
+
+.done h3 {
+  color: #fff;
+  text-decoration: line-through;
+}
