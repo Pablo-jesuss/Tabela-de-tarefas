@@ -78,7 +78,7 @@ select {
   text-align: center;
   padding: 0 1rem 1rem;
   border-bottom: 1px solid #ccc;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -138,10 +138,28 @@ select {
 #search input {
   width: 100%;
   margin-right: 0.3rem;
+  border: 2px solid #5e2f10;
 }
 
 #filter {
   width: 35%;
   display: flex;
   flex-direction: column;
+}
+
+#filter select {
+  border: 2px solid #5e2f10;
+  margin-top: 27px;
+  flex: 0.5;
+}
+
+/* todo list */
+
+.todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
 }
