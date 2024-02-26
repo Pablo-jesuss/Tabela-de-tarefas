@@ -64,11 +64,12 @@ const getSearchTodo = (search) => {
 
   todos.forEach((todo) => {
     let todoTitle = todo.querySelector("h3").innerText.toLowerCase();
-
     const normalizedSearch = search.toLowerCase();
 
-    if (!todoTitle.includes(search)) {
-      todo.computedStyleMap.display = "none";
+    if (!todoTitle.includes(normalizedSearch)) {
+      todo.style.display = "none";
+    } else {
+      todo.style.display = "flex";
     }
   });
 };
