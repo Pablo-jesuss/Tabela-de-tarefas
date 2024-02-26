@@ -64,6 +64,10 @@ const getSearchTodo = (search) => {
 
   todos.forEach((todo) => {
     let todoTitle = todo.querySelector("h3").innerText.toLocaleLowerCase();
+
+    if (!todoTitle.includes(search)) {
+      todo.computedStyleMap.display = "none";
+    }
   });
 };
 
