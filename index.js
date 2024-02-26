@@ -138,4 +138,6 @@ eraseBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   searchInput.value = "";
+
+  searchInput.dispatchEvent(new Event("keyup"));
 });
