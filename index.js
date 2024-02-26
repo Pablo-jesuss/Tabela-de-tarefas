@@ -59,6 +59,14 @@ const updateTodo = (text) => {
   });
 };
 
+const getSearchTodo = (search) => {
+  const todos = document.querySelectorAll(".todo");
+
+  todos.forEach((todo) => {
+    let todoTitle = todo.querySelector("h3").innerText.toLocaleLowerCase();
+  });
+};
+
 // Eventos
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -111,4 +119,10 @@ editForm.addEventListener("submit", (e) => {
   }
 
   toggleForms();
+});
+
+searchInput.addEventListener("keyup", (e) => {
+  const search = e.target.value;
+
+  getSearchTodo(search);
 });
