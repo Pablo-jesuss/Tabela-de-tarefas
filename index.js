@@ -88,6 +88,18 @@ const filterTodos = (filterValue) => {
           ? (todo.style.display = "flex")
           : (todo.style.display = "none")
       );
+      break;
+
+    case "todo":
+      todos.forEach((todo) =>
+        !todo.classList.contains("done")
+          ? (todo.style.display = "flex")
+          : (todo.style.display = "none")
+      );
+      break;
+
+    default:
+      break;
   }
 };
 
