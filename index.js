@@ -63,7 +63,9 @@ const getSearchTodo = (search) => {
   const todos = document.querySelectorAll(".todo");
 
   todos.forEach((todo) => {
-    let todoTitle = todo.querySelector("h3").innerText.toLocaleLowerCase();
+    let todoTitle = todo.querySelector("h3").innerText.toLowerCase();
+
+    const normalizedSearch = search.toLowerCase();
 
     if (!todoTitle.includes(search)) {
       todo.computedStyleMap.display = "none";
