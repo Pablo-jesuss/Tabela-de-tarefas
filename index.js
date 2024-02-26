@@ -75,10 +75,14 @@ const getSearchTodo = (search) => {
 };
 
 const filterTodos = (filterValue) => {
-  const todos = document.querySelectorAll(".todo")
+  const todos = document.querySelectorAll(".todo");
 
-  switch(filterValue)
-}
+  switch (filterValue) {
+    case "all":
+      todo.forEach((todo) => (todo.style.display = "flex"));
+      break;
+  }
+};
 
 // Eventos
 todoForm.addEventListener("submit", (e) => {
