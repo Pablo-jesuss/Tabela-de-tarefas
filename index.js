@@ -195,7 +195,7 @@ const loadTodos = () => {
   const todos = getTodosLocalStorage();
 
   todos.forEach((todo) => {
-    saveTodoLocalStorage(todo);  // Corrigindo o nome da função
+    saveTodoLocalStorage(todo); // Corrigindo o nome da função
   });
 };
 
@@ -222,3 +222,5 @@ const removeTodoLocalStorage = (todoText) => {
 };
 
 loadTodos();
+
+const updateTodoStatusLocalStorage = (todoText) => {};
