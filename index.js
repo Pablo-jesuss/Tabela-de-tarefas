@@ -139,6 +139,8 @@ document.addEventListener("click", (e) => {
 
   if (targetEl.classList.contains("remove-todo")) {
     parentEl.remove();
+
+    removeTodoLocalStorage(todoTitle);
   }
 
   if (targetEl.classList.contains("edit-todo")) {
@@ -212,8 +214,13 @@ const saveTodoLocalStorage = (todo) => {
 };
 
 const removeTodoLocalStorage = (todoText) => {
-  
-}
+
+  const todos = getTodosLocalStorage();
+
+  const filterTodos = todos.filter((todo) => todo.text !== todoText);
+
+  localStorage.setItem("todos", JSON.stringify(filteredTodos));
+};
 
 
 loadTodos();
