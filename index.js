@@ -195,7 +195,7 @@ const loadTodos = () => {
   const todos = getTodosLocalStorage();
 
   todos.forEach((todo) => {
-    save.Todo(todo.text, todo.done, 0)
+    saveTodo(todo.text, todo.done, 0)
   });
 };
 
@@ -219,8 +219,7 @@ const removeTodoLocalStorage = (todoText) => {
 
   const filterTodos = todos.filter((todo) => todo.text !== todoText);
 
-  localStorage.setItem("todos", JSON.stringify(filteredTodos));
+  localStorage.setItem("todos", JSON.stringify(filterTodos));
 };
 
 
-loadTodos();
