@@ -195,7 +195,7 @@ const loadTodos = () => {
   const todos = getTodosLocalStorage();
 
   todos.forEach((todo) => {
-    saveTodoLocalStorage(todo); // Corrigindo o nome da função
+    saveTodoLocalStorage(todo);
   });
 };
 
@@ -223,4 +223,12 @@ const removeTodoLocalStorage = (todoText) => {
 
 loadTodos();
 
-const updateTodoStatusLocalStorage = (todoText) => {};
+const updateTodoStatusLocalStorage = (todoText) => {
+  const todos = getTodosLocalStorage();
+
+  todos.map((todo) =>
+    todo.text === todoText ? (todo.done = !todo.done) : null
+  );
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
