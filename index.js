@@ -210,3 +210,10 @@ const saveTodoLocalStorage = (todo) => {
 
   localStorage.setItem("todos", JSON.stringify(todos));
 };
+
+const removeTodoLocalStorage = (todoText) => {
+  
+}
+
+
+loadTodos();
